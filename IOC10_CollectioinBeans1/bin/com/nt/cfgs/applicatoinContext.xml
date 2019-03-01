@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+ <bean id="std" class="com.nt.bean.Student">
+ <property name="names">
+ <list>
+ <value>sandeep</value>
+  <value>kuldeep</value>
+  <value>rakesh</value>
+ 
+ </list>
+ </property>
+ 
+ </bean>
+ 
+  <bean id="usr" class="com.nt.bean.User">
+ <property name="phones">
+ <set>
+ <value>564231</value>
+  <value>564241</value>
+  <value>564231</value>
+ 
+ </set>
+ 
+ </property>
+  </bean>
+ <bean id="clg" class="com.nt.bean.College">
+ <property name="facultyName">
+  <map>
+  <entry>
+  <key>
+  <value>hk</value>
+  </key>
+  <value>CoreJava</value>
+  </entry>
+  <entry>
+  <key>
+  <value>nt</value>
+  </key>
+  <value>Java</value>
+  </entry>
+  
+  </map>
+ </property>
+ 
+ </bean>
+
+
+<bean id="desg" class="com.nt.bean.Employee">
+<property name="empDesg">
+<props>
+<prop key="Sandeep">clerk</prop>
+<prop key="Sandeep1">clerk1</prop>
+
+</props>
+
+
+
+</property>
+
+</bean>
+ 
+</beans>
+
+
