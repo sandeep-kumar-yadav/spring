@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+   <!--  dependent class  -->
+  
+   
+  <bean id="aa" class="com.nt.bean.A">
+  <property name="b" ref="bb"></property>
+  
+  </bean>
+  
+  
+  <bean id="bb" class="com.nt.bean.B">
+  <property name="a" ref="aa"></property>
+  
+  </bean>
+  
+  
+</beans>
+
+
