@@ -3,20 +3,24 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
 
-     <bean id="drds"  class="org.springframework.jdbc.datasource.DriverManagerDataSource" abstract="true">
+     <bean id="drds"  default-merge="true" class="org.springframework.jdbc.datasource.DriverManagerDataSource" abstract="true">
     <property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"/>
         <property name="url" value="jdbc:oracle:thin:@localhost:1521:ORACLE"/>
-        <property name="username" value="scott"/>
-    <property name="password" value="tiger"/>
+       
+        <property name="connectionProperties">
+        <props key="username">scott</props>
+        
+        </property>
+       
+    
   
     </bean>
   <bean id="con" class="org.apache.commons.dbcp2.BasicDataSource" parent="drds">
-  
-  <!--  <property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"/>
-        <property name="url" value="jdbc:oracle:thin:@localhost:1521:ORACLE"/>
-        <property name="username" value="scott"/>
-    <property name="password" value="tiger"/>
-   -->
+
+        <property name="connectionProperties">
+         <props key="password">scott</props>
+        
+        </property>   
   </bean>  
     
   <bean id="stDao" class="com.nt.dao.StudentDAOImpl">
