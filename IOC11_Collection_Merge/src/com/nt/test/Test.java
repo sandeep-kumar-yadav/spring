@@ -25,7 +25,7 @@ public class Test {
            
        
         
-          b=factory.getBean("emp1",EngCollege.class);
+          b=factory.getBean("emp2",EngCollege.class);
          
           
           System.out.println(b);
