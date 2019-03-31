@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+   <!--  dependent class  -->
+   
+  <bean id="fir" class="com.nt.bean.Frist">
+ 
+  <property name="b" value="100">
+  <bean id="sed" class="com.nt.bean.Second">
+  
+  <property name="b" value="200"></property>
+  
+  </bean>
+  
+  
+  </property>
+  
+  </bean>
+  
+  
+</beans>
+
+

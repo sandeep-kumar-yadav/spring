@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="emp"  class="com.nt.bean.EngCollege" abstract="true">
+<property name="subjects">
+
+<set>
+ <value>C</value>
+ <value>English</value>
+</set>
+
+</property>
+</bean>
+<bean id="emp1"  class="com.nt.bean.EngCollege" parent="emp">
+<property name="subjects">
+
+<set merge="true">
+ <value>nt</value>
+ <value>java</value>
+</set>
+
+</property>
+
+</bean>
+<bean id="emp2"  class="com.nt.bean.EngCollege" parent="emp1">
+<property name="subjects">
+
+<set merge="true">
+ <value>DS</value>
+ <value>Add Java</value>
+</set>
+
+</property>
+
+</bean>
+</beans>
+
+

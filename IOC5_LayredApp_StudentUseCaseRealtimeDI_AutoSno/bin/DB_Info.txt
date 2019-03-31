@@ -1,0 +1,19 @@
+
+SQL> desc sp_student;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ SNO                                                NUMBER(10)
+ SNAME                                              VARCHAR2(20)
+ SADD                                               VARCHAR2(20)
+ TOTAL                                              NUMBER(10)
+ AVG                                                NUMBER(10,2)
+ RESULT                                             VARCHAR2(10)
+
+
+
+
+
+ sql>create sequence SNO_NUMBER start with 1000 increment by 1;
+
+
+

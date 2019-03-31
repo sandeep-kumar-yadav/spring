@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="baseInfo" class="com.nt.bean.User11" abstract="true">
+<property name="bName" value="splender plus"/>
+<property name="gear" value="5"/>
+<property name="engType" value="petrol"/>
+<property name="vender" value="splender plus"/>
+</bean>
+ 
+ <bean id="mybike" class="com.nt.bean.User11" parent="baseInfo">
+    <property name="BNo" value="RJ 23 C 3540"/>
+    <property name="color" value="Red"/>
+    <property name="ownerName" value="sandeep"/>
+    <property name="model" value="Hero"/>
+    <property name="engNo" value="12345df5f"/>
+    <property name="speed" value="120 KMPH"/>
+    
+ </bean>
+</beans>
+
+
